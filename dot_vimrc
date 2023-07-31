@@ -1,0 +1,126 @@
+" ========= basic setup ========
+filetype plugin on
+set number
+set relativenumber
+
+set encoding=utf-8
+
+" for :term
+set shell=/usr/bin/fish
+
+" ========= short cuts =========
+let mapleader = ","
+map <leader>s :w<cr>
+map <leader>q :q<cr>
+map <leader>n :bn<cr>
+map <leader>p :bp<cr>
+map <leader>d :bp<bar>sp<bar>bn<bar>bd<cr>
+
+" replace tag stack jump
+nnoremap <C-t> :tabnew<CR>
+" ========= editing ==========
+
+set ignorecase
+set smartcase
+
+set mouse=a
+
+" remove trailing whitespaces
+autocmd BufWritePre * :%s/\s\+$//e
+
+set autoindent
+set smartindent
+" On pressing tab, insert 2 spaces
+set expandtab
+" show existing tab with 2 spaces width
+set tabstop=2
+set softtabstop=2
+" when indenting with '>', use 2 spaces width
+set shiftwidth=2
+
+" ctags recursively search parents
+set tags=tags;
+
+" folding settings
+set foldmethod=indent
+set foldlevel=99
+"set foldmethod=syntax
+let g:markdown_folding = 1
+
+" ledg files
+" autocmd BufRead,BufNewFile *.*.ledg setlocal ts=55 sw=55 expandtab! softtabstop=-1 nowrap listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨ list noautoindent nocindent nosmartindent indentexpr=
+
+" =========== plugins ===========
+nnoremap <C-n> :NERDTreeToggle<CR>
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+" =========== theme ==========
+let g:solarized_termcolors=256
+set term=xterm-256color
+set termguicolors
+set t_Co=256
+set colorcolumn=80
+let hr = str2nr(strftime('%H'))
+if hr <= 18
+  set background=light
+  colorscheme scheakur
+else
+  set background=dark
+  colorscheme rosepine
+endif
+" colorscheme scheakur
+
+" ========== Limelight ==========
+" Color name (:help cterm-colors) or ANSI code
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+
+" Color name (:help gui-colors) or RGB color
+let g:limelight_conceal_guifg = 'DarkGray'
+let g:limelight_conceal_guifg = '#777777'
+
+" Default: 0.5
+let g:limelight_default_coefficient = 0.5
+
+" Number of preceding/following paragraphs to include (default: 0)
+let g:limelight_paragraph_span = 1
+
+" Beginning/end of paragraph
+"   When there's no empty line between the paragraphs
+"   and each paragraph starts with indentation
+let g:limelight_bop = '^\s'
+let g:limelight_eop = '\ze\n^\s'
+
+" Highlighting priority (default: 10)
+"   Set it to -1 not to overrule hlsearch
+let g:limelight_priority = -1
+
+" ========== gui =========
+" remove toolbar
+set guioptions-=T
+inoremap ê <Esc>j
+inoremap ë <Esc>k
+inoremap Ï <Esc>O
+inoremap ï <Esc>o
+inoremap Ö <Esc>V
+" Use console dialogs instead of popup dialogs
+set guioptions+=c
+set winaltkeys=no
+set guioptions-=M
+
+function Document_mode()
+  set spell
+  set laststatus=2
+  set statusline=%1*
+  set statusline+=%M
+  set statusline+=%y
+  set statusline+=%=
+  set statusline+=%{wordcount().words}\ words
+  set statusline+=\ %l/%L\ lines,\ %P
+  set title
+  set textwidth=80
+endfunction
+
+command DocumentMode call Document_mode()
+
+source ~/.vim/extraconfs/coc.conf.vim
