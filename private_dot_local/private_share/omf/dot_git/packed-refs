@@ -1,0 +1,21 @@
+# pack-refs with: peeled fully-peeled sorted 
+b9c88c629092499b4d85be594da18e4c6bf76740 refs/remotes/origin/better-contributing
+99d4a3c16011957a3ca253f4c0ec76369b145e5f refs/remotes/origin/fix-completions
+9eb496de86655bbd352819d10455f69fef0da6ac refs/remotes/origin/fix-double-key-bindings-load
+f5e2ae6960ae3dbba964fd73175cb09e4dfe3604 refs/remotes/origin/fix-line-escape
+d1578c5e33846dacb60b38526a440d59c9e38af5 refs/remotes/origin/fix-update-blanks
+be4ac6bf6d529c5fe235bfcab00fb85b67631a00 refs/remotes/origin/issue-604
+0b1396ad7962073fa25615bf03c43b53eddc2d56 refs/remotes/origin/master
+70a32d5a59308fc5647e6739e126912b6ca39024 refs/remotes/origin/omf-install-tests
+6172eac69aa92a3ec718d40e00709295c2b5fe47 refs/remotes/origin/registry/add-node-binpath
+4a48ac274c0834ef7011d48995b3b2e224be2e84 refs/remotes/origin/registry/add-nodenv
+16b7b1de56c51a5ffe15721cda3613536c105477 refs/remotes/origin/registry/add-pyenv
+8217eac3621a080931605bc04a905f96868929cd refs/remotes/origin/wip/require-theme
+06aea3adc48f02cd41f7e09607900240cd1d67fa refs/remotes/origin/wip/require-theme-no-fs
+15e9af84b14a3e0a6a7f703a694a6b52a48198ad refs/tags/v2
+ec2b34a2580caf51fa441370b7aee2fbdffe8a37 refs/tags/v3
+016ea34a9b6da57aa7a01df71327ea4d26b2e168 refs/tags/v4
+922902a99da6e45b0c894078f7a78eba5a04511a refs/tags/v5
+1069f1fac2003a532b7a2920886589e600adaf20 refs/tags/v6
+c814d44913359bcb78b56f381ab5e7ca9ef75350 refs/tags/v7
+^92a572d8cdfdf5b219269d59210b8a28f6cd6616
