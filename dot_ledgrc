@@ -1,0 +1,22 @@
+--hide-zero
+#--light-theme
+--file=~/Documents/ledg/book
+
+--alias---nhz="--hz=false"
+
+--alias-is="incomestatement"
+--alias-inc="incomestatement"
+--alias-bs="balancesheet"
+--alias-bse="balancesheete"
+--alias-cf="cashflow"
+
+--alias-incomestatement="incomestatement --tree --sort --sp"
+--alias-balancesheet="balancesheet --tree --sort=false --sp"
+--alias-cashflow="cashflow --tree --sort --sp"
+
+-i
+--default-pending
+
+--valuation-eop
+
+--tree
