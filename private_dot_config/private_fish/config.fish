@@ -9,8 +9,8 @@ bass source ~/.bash_profile
 alias ll="ls -lh"
 
 alias lr="l --real"
-alias lra="l --real ass\* --hz --sum --tree=0"
-alias la="l ass\* --hz --tree=0 --sum"
+alias lra="l --real 'ass*|lia*' --hz --sum --tree=0"
+alias la="l 'ass*|lia*' --hz --tree=0 --sum"
 alias lpend="l info pending:true"
 
 function lb
