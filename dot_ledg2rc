@@ -1,0 +1,5 @@
+#light-theme = true
+
+file = /home/SitanHuang/Documents/ledg/book.ledg2
+
+pipe-console-long = "less -X -r -S +G -~ -F -"

@@ -1,6 +1,6 @@
 --hide-zero
 #--light-theme
---file=~/Documents/ledg/book
+--file=~/Documents/ledg/books/ledg1-books/book
 
 --alias---nhz="--hz=false"
 
